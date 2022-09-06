@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InstagramFeed.js</title>
-  </head>
-  <body>
-    <h1>Here is the instagram post</h1>
-    <form id="form">
-      <input type="text" id="userName" placeholder="Enter the user id" />
-      <input type="submit" value="Search" />
-    </form>
-    <div id="instagram-feed1" class="instagram_feed"></div>
-    <script src="./script.js"></script>
-  </body>
+<html>
+<head>
+	<title>Instafeed on Your Website</title>
+	<style type="text/css">
+		a img{ 
+			width: 25%;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+  <div id="instafeed-container"></div>
+
+	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+    	resolution: 'high_resolution',
+		accessToken: 'IGQVJVTjRZAWHNzVGdadXB4VkE5ZAFJBaWR2bkIxa09wZA2NvLVFRQW5wN3o5NXFEa3BkdzR4djBjRWR6NTVyVFdQN3FORHFrVU50M0tvRFJ0WUFLMFI5WWl6UVRnbElYeTJqaWR2X19xTU9IZAG1kaUNsegZDZD'
+	});
+	userFeed.run();
+	</script>
+</body>
 </html>
